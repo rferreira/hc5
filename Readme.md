@@ -1,6 +1,6 @@
 Example HC5 server that does not appear to work, ways to reproduce the problem: 
 
-1. mvn build and run Main class (this should run on anything JDK8 and older)
+1. mvn build and run Main class (this should run on anything JDK8 and newer but it was tesed on JDK11)
 1. Run apache bench (ab) against it, for example: 
 
 ```text
@@ -13,3 +13,4 @@ Benchmarking localhost (be patient)
 apr_socket_recv: Connection reset by peer (54)
 
 ```
+and you will see that an odd reset packet is sent back after the first request is fullfilled 
